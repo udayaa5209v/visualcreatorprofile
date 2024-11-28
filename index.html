@@ -75,7 +75,6 @@
           <a href="https://www.instagram.com/swndr_._?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="bi bi-instagram"></i></a>
           <a href="#"><i class="bi bi-facebook"></i></a>
           <a href="#"><i class="bi bi-twitter-x"></i></a>
-          <a href="#"><i class="bi bi-linkedin"></i></a>
         </div>
       </div>
 
@@ -109,7 +108,7 @@
               <ul>
                 <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>22</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>sowndharp007@gmail.com</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>sowndharvisuals@gmail.com</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
               </ul>
             </div>
@@ -684,7 +683,6 @@
                       <a href="https://www.instagram.com/swndr_._?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="bi bi-instagram"></i></a>
                       <a href="#"><i class="bi bi-facebook"></i></a>
                       <a href="#"><i class="bi bi-twitter-x"></i></a>
-                      <a href="#"><i class="bi bi-linkedin"></i></a>
                     </div>
                   </div>
                 </div>
@@ -692,32 +690,27 @@
     
             </div>
     
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
+            <form method="GET" class="php-email-form" onsubmit="return validateForm()">
               <div class="row gy-4">
     
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" id="name" class="form-control" placeholder="Your Name" required="">
                 </div>
     
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <input type="email" class="form-control" id="email" placeholder="Your Email" required="">
                 </div>
     
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <input type="text" class="form-control" id="subject" placeholder="Subject" required="">
                 </div>
-    
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-    
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-    
-                  <button type="submit">Send Message</button>
-                </div>
+
+                <div class="form-group form-group-lg">
+                  <label class="skills" for="body">
+                  </label>
+                  <textarea id="body" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+              </div>
+              <input type="submit" value="Send" id="navigation" class="btn btn-primary">
     
               </div>
             </form><!-- End Contact Form -->
@@ -726,6 +719,27 @@
     
         </section><!-- /Contact Section -->
 
+        <script>
+          function validateForm() {
+              // Get form values
+              var name = document.getElementById('name').value;
+              var email = document.getElementById('email').value;
+              var subject = document.getElementById('subject').value;
+              var message = document.getElementById('body').value;
+      
+              // Construct the mailto URL
+              var mailtoLink = "mailto:sowndharvisuals@gmail.com" +
+                  "?subject=" + encodeURIComponent(subject) +
+                  "&body=" + encodeURIComponent("Hi I'm " + name + "," +  "\n\n" + message);
+      
+              // Open the mail client
+              window.location.href = mailtoLink;
+      
+              // Prevent default form submission
+              event.preventDefault();
+              return false;
+          }
+      </script>
 
 
 <!-- End section -->
@@ -738,7 +752,6 @@
           <a href="https://www.instagram.com/swndr_._?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="bi bi-instagram"></i></a>
           <a href=""><i class="bi bi-facebook"></i></a>
           <a href=""><i class="bi bi-twitter-x"></i></a>
-          <a href=""><i class="bi bi-linkedin"></i></a>
         </div>
         <div class="container">
           <div class="copyright">
